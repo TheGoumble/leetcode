@@ -11,7 +11,7 @@ function PalindromeNum(x) {
   let flipNum = num.reverse()
   let output = false
   let Exp = `From left to right, it reads ${num}. From right to left, it becomes ${flipNum}. Therefore it is not a palindrome.\n`
-  if (num[0] === num[2]) {
+  if (num[0] == num[2]) {
     output = true
     let Exp = `${num} reads as ${flipNum} from left to right and from right to left.\n`
   }
