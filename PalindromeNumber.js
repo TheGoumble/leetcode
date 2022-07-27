@@ -2,21 +2,25 @@
 
 // An integer is a palindrome when it reads the same backward as forward.
 
-function PalindromeNum(x) {
-//set num to string
-  let toString = x.toString()
-  //split string
-  let num = toString.split("")
-//flip string
-  let flipNum = num.reverse()
-  let output = false
-  let Exp = `From left to right, it reads ${num}. From right to left, it becomes ${flipNum}. Therefore it is not a palindrome.\n`
-  if (num[0] == num[2]) {
-    output = true
-    let Exp = `${num} reads as ${flipNum} from left to right and from right to left.\n`
-  }
+// program to check if the string is palindrome or not
 
-  console.log(`Input: ${x}\nOutput: ${output}\nExplaniation: ${Exp}`)
+function checkPalindrome(string) {
+  // convert string to an array
+  const arrayValues = string.split("")
+
+  // reverse the array values
+  const reverseArrayValues = arrayValues.reverse()
+
+  // convert array to string
+  const reverseString = reverseArrayValues.join("")
+
+  if (string == reverseString) {
+    console.log("It is a palindrome")
+  } else {
+    console.log("It is not a palindrome")
+  }
 }
 
-PalindromeNum(121)
+//take input
+
+checkPalindrome('40004')
